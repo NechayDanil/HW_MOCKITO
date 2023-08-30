@@ -53,5 +53,15 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected,actual);
 
     }
+    @Test
+    public void testSixLasti() {
+        Manager manager = new Manager();
+        manager.addMoves("Film 1");
+        manager.addMoves("Film 2");
+        String[] expected = {"Film 2", "Film 1"};
+        String [] actual = manager.findLast();
+        Assertions.assertArrayEquals(expected,actual);
+
+    }
 
     }

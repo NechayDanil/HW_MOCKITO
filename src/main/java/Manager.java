@@ -1,5 +1,12 @@
 public class Manager {
     private String[] movies = new String[0];
+    private int limit;
+    public Manager() {
+        this.limit = 5;
+    }
+    public Manager(int limit) {
+        this.limit = limit;
+    }
 
     public void addMoves(String movie) {
         String[] tmp = new String[movies.length + 1];
@@ -17,10 +24,10 @@ public class Manager {
 
     public String[] findLast() {
         int result;
-        if (movies.length < 5) {
+        if (movies.length < limit) {
             result = movies.length;
         } else {
-            result = 5;
+            result = limit;
         }
         String[] ans = new String[result];
         for (int i = 0; i < ans.length; i++) {
