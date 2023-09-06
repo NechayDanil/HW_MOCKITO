@@ -1,9 +1,11 @@
 public class Manager {
     private String[] movies = new String[0];
     private int limit;
+
     public Manager() {
         this.limit = 5;
     }
+
     public Manager(int limit) {
         this.limit = limit;
     }
